@@ -1,0 +1,25 @@
+
+
+01. What is Abstract Class
+02. Example of Abstract Class
+03. Why Abstract Class
+04. KeyPoint 
+
+
+
+                (meaning- No object is created only references are created)
+
+=> Abstract method has semicolon at the end meaning (undefined)
+=>When any class has at least zero or more abstract method then that class is called abstract class
+=> If a class is inherited from abstract class then that class must be abstract
+=> But, if the all methods of abstract class is overrided in inherited(subclass) then sub class will become concrete class and their object will created
+
+
+
+
+
+
+ ## (Do's and Don't)
+
+ =>Astract class cannot be final becouse after becoming final it cannot be extend
+ =>Abstract method canot be static

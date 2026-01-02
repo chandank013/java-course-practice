@@ -1,0 +1,72 @@
+                                    Static 
+    => (Static keyword is used for meta data i.e information of a class and used as shared data among all members of the class, it is created inside method area)
+
+
+
+01. Static Variable
+02. Static Method
+03. Static Nested class
+04. Static Blocks  (Utilise during the setup notcommonly used and main method get executed after execution of all static block)
+
+
+Note: 01.Only inner class will be static can inherited.
+
+    Example:
+    class Outer 
+    {
+        static class Inner { }
+    }
+
+    class SubInner extends Outer.Inner { }
+
+
+    02 No, static methods cannot be overridden in Java.
+    03 If you declare a static method with the same name in a subclass, it is called method hiding, not overriding.
+    The version called depends on the reference type, not the object type.
+    Example:
+
+    class A 
+    {
+    static void show() { System.out.println("A"); }
+    }
+    class B extends A 
+    {
+    static void show() { System.out.println("B"); }
+    }
+
+    public class Demo {
+        public static void main(String[] args) {
+            A.show(); // prints "A"
+            B.show(); // prints "B"
+            A a = new B();
+            a.show(); // prints "A" (not "B")
+        }
+    }
+    04 static member only access the static variable
+    05 this(), super() keyword cannot be used under the static method
+
+
+                            final
+        
+    => final is same as constant in java.
+    => Once value assign the cannot be modify.
+    => inside method first final should be initalisd then assign take place for printing
+    => three method of initialisation of final is directly initalised (final float PI=3.14f;), inside the constructor  (public FinalDemo(){PI=3.1425f;})
+    and inside the instance;
+
+
+01. final Variable
+02. final Method
+03. final class
+
+
+Note: 01 final method cannot be override
+Note: 02 final class cannot be inherited
+
+
+
+                        Singleton class 
+
+    => the class that create single object more than one object of class is not allowed.
+    =>
+

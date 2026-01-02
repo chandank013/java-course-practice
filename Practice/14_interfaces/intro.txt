@@ -1,0 +1,35 @@
+01. What is interface?
+
+02. Multiple inheritence VS Interfaces (java doesn't have multiple inheritence but it achieved bt interface)
+03. Example of  interface?
+
+
+=>Interface is completely used for achieving polymorphism.
+=> classes are extended but interfaces are implemented
+=> when we exten then a class will always extend from only one class
+=> But in interfaces an class  is implemented from multiple interface that help in achieving polymorphism
+=> We can create references of interface but cannot create the object of interface.
+=> Interfaces are used for CallBack Method.
+=CallBack method is formally used in event handling.
+
+
+
+04. Do's & Don't of interface?
+
+=> we can make the methods of interface public and abstract but not private becouse they are sippose to be implemented by the classes
+
+=>Interface abstract method cannot have body but a interface can have static method with body
+
+=>Identifier can be obtained by interface name with dot(.) operator.
+
+=>we can gate static member with interface name without creating object of interface method.
+
+=> if i have to modify the interface in between then we should use (default) that could not disturb the other classes that are implemented priviously 
+
+=> if i modify the interface in between then the class that are implemented previously become abstract class.
+
+=> We can create private method inside interface but not use outside
+
+=>Private methods in interfaces are only accessible within the interface itself.
+=>Only public and default methods in interfaces can be overridden by implementing classes.
+=>Static methods in interfaces also cannot be overridden.

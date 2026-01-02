@@ -1,0 +1,15 @@
+# What is inner class
+=> TO reduce the complecity of bigger class we define inner class that is class insde class
+
+# Type of Inner Class
+
+01. Nested Inner Class  (class inside another class cannot directly access outside the classes)
+02. Local Inner Class  (Class inside a method uses when a class is inherit from existing class and mplementing from interface)
+03. Anonymous Inner class  (It is defined at the time of creation of object itself useful for interfaces and abstract classes)
+04. static inner class  ( it is ststic member of outer class {static class uses only static member of outer classnot other member}. it can also direclty access out side outer class)
+
+
+Note:
+01. We can use inner class by creating object inside the outrer class
+02. we cannot using member of inner class directly but we can use by creatig object in outer class
+03. we also cannot use the inner class outside the outer class 

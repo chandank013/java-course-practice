@@ -1,0 +1,36 @@
+                # Java.lang Package
+# Object class
+
+=> Object class is parent class of all class in java.
+=> Any object directly and indirectly inheriting form Object class becouse on creating object of any class having same methods
+
+# Wrapper Class 
+=> That make a wrapper around a premitive data type with the help of referances and make Object.
+
+
+# String => Immutable
+# String Buffer => mutable , Thread Save mean Two Thread cannot be utilise te same string buffer object simultaneously.
+# String Builder => mutable(Same as String Buffer but it allow more than two thread to enter inside  and call the method and modify)
+
+
+                    # Enum
+=> An enum in Java is a special data type that allows you to define a set of named constants. It is used to represent a fixed set of related values, such as days of the week, directions, or departments.
+
+Key Points:
+
+Enums are type-safe and can have fields, methods, and constructors.
+Each value in an enum is an object (instance) of the enum type.
+Enums can be used in switch statements and compared using ==.
+Enums improve code readability and reduce errors from invalid values.
+
+
+
+Reflection in Java
+
+Reflection is a feature in Java that allows a program to examine and manipulate the runtime behavior of classes, interfaces, fields, and methods. It is part of the java.lang.reflect package.
+
+What does reflection do?
+
+Allows you to inspect class structure (fields, methods, constructors) at runtime.
+Enables dynamic creation of objects, method invocation, and field access, even if you don’t know their names at compile time.
+Useful for frameworks, libraries, debuggers, and tools that need to work with classes dynamically (like IDEs, dependency injection, serialization, etc.).

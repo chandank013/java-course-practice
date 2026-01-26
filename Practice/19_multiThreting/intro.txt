@@ -1,0 +1,44 @@
+                    # MultiThreading (multiple things work simultaneously in a single application)
+
+01. MultiProgramming.
+02. Why MultiThreading.
+03. Control flow of a MultiProgramming.
+04. Thread in Java.
+
+
+# MultiThreading in Java:
+=> there are ttwo class that used to achive multithreating
+ 01.Thread class (actual machanism are present in this).
+ 02.Runnable Interface 
+
+=> If we want achiving multithreating then our class must extend from Thread and impplements Runnable Interface.
+=> whenever we want to extends the thread class and want to achive multithreading we must override run method.
+=> Run method is starting point of thread. and having actual functionality of thread class.
+
+
+# Thread class (having many methods)
+01. Constructors
+02. getxxx()/setxxx()
+03. Enquiry
+04. Instence method
+05. Static methods
+
+
+# Synchronisation
+=>Synchronization is a mechanism in Java to control the access of multiple threads to shared resources. It prevents data inconsistency and thread interference by allowing only one thread to access a critical section (shared code or data) at a time
+
+#Why Synchronization?
+
+When multiple threads access and modify shared data simultaneously, it can lead to inconsistent or incorrect results.
+Synchronization ensures that only one thread can execute a synchronized block or method at a time.
+
+
+
+01. Mutex = Thread itself know how to read and write.
+02. Shemaphora = Thread know how to read and write but locking and unlocking governed by operating system.
+03. Monitor = Object itself take responsibility of mutual exclusion. Object will decide who will access or governed the locking and unlocking system. 
+
+
+
+# Inner Thread
+=>  One will waiting all other until get the set value by One then after One can change .

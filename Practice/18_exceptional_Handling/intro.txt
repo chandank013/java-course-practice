@@ -1,0 +1,32 @@
+                Type of Errors
+        01. Syntex Error (This error for programmer)
+        02. Logical Error (This error for programmer)
+        03. Runtime Error (This error for user)
+
+
+        # use try and catch to handle the exception #
+
+
+# How exception is propagated.
+=> Exception is propagated to its calling continue until program crassed.It happen when we called one methods to another and another methods to main methods then program get cressed when exception reached to main methods.
+=> By using throws(with method name ) and throw(inside the methods) the use try and catch in further methods
+=> It can be handled in any methods een in main method.
+
+
+# How to create our own exception class.
+=> By creating our class and expends from exception class
+
+class NegativeDimensionException extends Exception
+{
+    public String toString()
+    {
+        return "Dimensions of a Rectangle could not be Negative.";
+    }
+}
+
+
+
+                # Try With Resources
+01.What are resources? (the things that used by program like file etc..)
+02. Why finally? (If we usef any file and program crassed due to some error without closing that file then that file could not be  used by any program)
+03. Try with Resources?

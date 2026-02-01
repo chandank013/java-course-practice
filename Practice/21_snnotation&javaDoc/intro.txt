@@ -1,0 +1,52 @@
+# 
+GitHub Copilot
+Javadoc and Its Work
+
+Javadoc is a tool provided by Java to generate HTML documentation from comments in the source code. These comments use special tags (like @author, @param, @return, etc.) and are written above classes, methods, and fields using /** ... */.
+
+How Javadoc Works:
+
+You write documentation comments in your Java code using /** ... */.
+Run the javadoc tool on your .java files.
+Javadoc reads these comments and generates HTML documentation pages, making it easy for others to understand and use your code.
+
+
+
+
+# Annotation
+
+Annotation and Its Usability in Java
+
+Annotation is a special form of metadata in Java, used to provide information about the code to the compiler, tools, or frameworks. Annotations do not directly affect program logic but can influence how code is processed.
+
+Usability of Annotations:
+Compiler Instructions:
+Used to give instructions to the compiler (e.g., @Override, @SuppressWarnings).
+Code Analysis:
+Tools and IDEs use annotations for static code analysis and error checking.
+Framework Configuration:
+Many frameworks (like Spring, JUnit) use annotations for configuration, dependency injection, and mapping (e.g., @Autowired, @Test, @Entity).
+Runtime Processing:
+Some annotations are available at runtime and can be accessed via reflection for dynamic behavior.
+
+
+
+Annotation	Purpose
+@Override	Checks method overrides superclass method
+@Deprecated	Marks element as outdated/should not be used
+@SuppressWarnings	Suppresses specified compiler warnings
+@SafeVarargs	Suppresses varargs warnings for generics
+@FunctionalInterface	Ensures interface is a functional interface
+
+
+
+ // User define annotation is same as interaface but start with @  that is inheroted from annotation package of java.lang
+
+ Annotation	Work / Purpose
+@Retention	Specifies how long the annotation is retained (SOURCE, CLASS, or RUNTIME).
+@Documented	Indicates the annotation should be included in Javadoc documentation.
+@Target	Specifies where the annotation can be applied (e.g., method, field, local variable, etc.).
+@Repeatable	Allows the annotation to be applied multiple times to the same element.
+@Inherited	Allows subclasses to inherit the annotation from a superclass (class-level only).
+
+

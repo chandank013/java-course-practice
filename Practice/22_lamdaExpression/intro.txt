@@ -1,0 +1,48 @@
+Lambda Expression Introduction (Java)
+
+A lambda expression is a short block of code which takes in parameters and returns a value. Lambda expressions are used primarily to define the implementation of a functional interface (an interface with a single abstract method) in a clear and concise way.
+
+Key Points:
+
+Introduced in Java 8.
+Provides a way to write anonymous methods (functions) in Java.
+Makes code more readable and concise, especially for functional programming and working with collections.
+Syntax:
+(parameters) -> { body }
+Example:
+
+// Traditional way
+Runnable r1 = new Runnable() {
+    public void run() {
+        System.out.println("Hello");
+    }
+};
+
+// Using lambda expression
+Runnable r2 = () -> System.out.println("Hello");
+
+Summary:
+Lambda expressions simplify the implementation of functional interfaces, making Java code shorter and more expressive.
+
+
+
+Method References in Java
+
+A method reference is a shorthand notation of a lambda expression to call a method directly. It is used to refer to a method without executing it. Method references make code more concise and readable, especially when the lambda expression only calls an existing method
+
+Syntax:
+ClassName::methodName
+object::methodName
+ClassName::new   // for constructor reference
+
+
+Types of Method References:
+
+Reference to a static method:
+ClassName::staticMethod
+Reference to an instance method of a particular object:
+object::instanceMethod
+Reference to an instance method of an arbitrary object of a particular type:
+ClassName::instanceMethod
+Reference to a constructor:
+ClassName::new

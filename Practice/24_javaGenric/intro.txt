@@ -1,0 +1,41 @@
+1. Definition
+Generics in Java allow you to write classes, interfaces, and methods with a placeholder for types (type parameters).
+They provide compile-time type safety and eliminate the need for casting.
+
+Example:
+ArrayList<Integer> list = new ArrayList<>();
+
+2. Bounds on Generics
+Upper Bound: Restricts the type to a subclass of a specific class.
+
+Example 
+class Box<T extends Number> { ... }
+
+Here, T can be Number or its subclasses (Integer, Double, etc.).
+
+Lower Bound: Restricts the type to a superclass of a specific class.
+void addNumbers(List<? super Integer> list) { ... }
+
+Here, the list can accept Integer or its superclasses.
+
+3. Generic Methods
+You can define methods with their own type parameters.
+
+Example:
+public <T> void printArray(T[] array) {
+    for (T element : array) {
+        System.out.println(element);
+    }
+}
+
+4. Do's and Don'ts
+Do's:
+
+Use generics to ensure type safety.
+Use bounded types when you need to restrict type parameters.
+Use generic methods for reusable code.
+Don'ts:
+
+Don't use primitive types as type parameters (use Integer instead of int).
+Don't use generic arrays (e.g., T[] arr = new T[10]; is not allowed).
+Don't mix raw types and parameterized types (avoid List list = new ArrayList<String>();).

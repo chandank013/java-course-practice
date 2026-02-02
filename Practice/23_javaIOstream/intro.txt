@@ -1,0 +1,74 @@
+# Java I/O Streams Notes
+
+## What are Streams?
+- Streams are sequences of data.
+- Java I/O (Input/Output) uses streams to read and write data (bytes or characters).
+
+## Types of Streams
+1. **Byte Streams**
+   - Handle raw binary data.
+   - Classes: `InputStream`, `OutputStream` (and subclasses like `FileInputStream`, `FileOutputStream`).
+
+2. **Character Streams**
+   - Handle character data (text).
+   - Classes: `Reader`, `Writer` (and subclasses like `FileReader`, `FileWriter`).
+
+## Common Classes
+
+| Class                | Description                        |
+|----------------------|------------------------------------|
+| FileInputStream      | Reads bytes from a file            |
+| FileOutputStream     | Writes bytes to a file             |
+| FileReader           | Reads characters from a file       |
+| FileWriter           | Writes characters to a file        |
+| BufferedReader       | Reads text efficiently             |
+| BufferedWriter       | Writes text efficiently            |
+| DataInputStream      | Reads primitive data types         |
+| DataOutputStream     | Writes primitive data types        |
+| ObjectInputStream    | Reads objects (serialization)      |
+| ObjectOutputStream   | Writes objects (serialization)     |
+
+## Basic Usage Example
+
+```java
+// Writing to a file
+FileWriter writer = new FileWriter("output.txt");
+writer.write("Hello, world!");
+writer.close();
+
+// Reading from a file
+BufferedReader reader = new BufferedReader(new FileReader("output.txt"));
+String line = reader.readLine();
+reader.close();
+```
+
+## Important Points
+- Always close streams to free resources (`close()` method).
+- Use try-with-resources for automatic closing.
+- Buffered streams improve performance.
+- Streams can be chained for advanced operations.
+
+## Try-with-Resources Example
+
+```java
+try (FileReader fr = new FileReader("file.txt");
+     BufferedReader br = new BufferedReader(fr)) {
+    String line;
+    while ((line = br.readLine()) != null) {
+        System.out.println(line);
+    }
+}
+```
+
+## Summary
+- Use byte streams for binary data.
+- Use character streams for text.
+- Always handle
+
+
+Serialization in Java is the process of converting an object into a byte stream, so that it can be easily saved to a file, sent over a network, or stored in a database. This byte stream can later be deserialized to recreate the original object in memory.
+
+It is used for persistent storage and communication.
+To serialize an object, the class must implement the Serializable interface.
+Example:
+Deserialization is the reverse process—converting the byte stream back into an object.

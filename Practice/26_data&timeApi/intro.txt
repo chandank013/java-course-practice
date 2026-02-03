@@ -1,0 +1,56 @@
+1. Introduction
+
+Introduced in Java 8 (java.time package).
+Replaces old java.util.Date, java.util.Calendar, and related classes.
+Provides a modern, immutable, and thread-safe approach to date and time handling.
+
+
+
+2. Key Classes
+
+Class	Purpose
+LocalDate	Date without time (YYYY-MM-DD)
+LocalTime	Time without date (HH:MM:SS)
+LocalDateTime	Date and time without timezone
+ZonedDateTime	Date and time with timezone
+Instant	Timestamp (machine time, UTC)
+Period	Amount of time in years, months, days
+Duration	Amount of time in seconds, nanoseconds
+DateTimeFormatter	Formatting and parsing date/time
+
+
+4. Advantages
+
+Immutable: All classes are immutable and thread-safe.
+Clear API: Easy to read and use.
+Time Zone Support: Handles time zones and offsets.
+No More Deprecated Methods: Avoids confusion of old APIs.
+5. Common Pitfalls
+Do not mix old (Date, Calendar) and new (java.time) APIs.
+Use DateTimeFormatter for custom parsing/formatting.
+Use ZonedDateTime for time zone-specific operations.
+
+
+Here are the main disadvantages of the old java.util.Date and java.util.Calendar APIs:
+
+Disadvantages of java.util.Date and java.util.Calendar
+Mutable Objects:
+Both Date and Calendar are mutable, making them unsafe for use in multi-threaded environments.
+
+Poor API Design:
+Many confusing and inconsistent method names (e.g., months are zero-based, years are offset from 1900).
+
+Lack of Time Zone Support:
+Time zone handling is limited and error-prone.
+
+Deprecated Methods:
+Several methods are deprecated, leading to confusion and warnings.
+
+No Immutability:
+Changes to a Date or Calendar object can affect other code that references the same object.
+
+Limited Formatting and Parsing:
+Formatting and parsing dates and times is cumbersome and not thread-safe.
+
+Difficult Arithmetic:
+Adding or subtracting dates and times is not straightforward.

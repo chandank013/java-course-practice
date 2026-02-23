@@ -1,0 +1,54 @@
+JDBC (Java Database Connectivity) Notes
+
+1. Introduction
+JDBC is an API in Java for connecting and executing queries with databases.
+It allows Java applications to interact with relational databases in a platform-independent way.
+
+2. Key Components
+DriverManager: Manages a list of database drivers and establishes a connection to the database.
+Connection: Represents a session with a specific database.
+Statement: Used to execute SQL queries (static SQL).
+PreparedStatement: Used for executing precompiled SQL queries with parameters (dynamic SQL).
+
+ResultSet: Represents the result set of a query, allowing data retrieval.
+SQLException: Handles database access errors.
+
+
+3. JDBC Architecture
+Four-tier architecture: Application → JDBC API → JDBC Driver Manager → JDBC Driver → Database.
+JDBC drivers translate Java calls into database-specific calls.
+
+
+4. Types of JDBC Drivers
+Type 1: JDBC-ODBC Bridge Driver
+Type 2: Native-API Driver
+Type 3: Network Protocol Driver
+Type 4: Thin Driver (Pure Java, most commonly used)
+
+
+5. JDBC Workflow
+Load the database driver.
+Establish a connection to the database.
+Create a statement or prepared statement.
+Execute SQL queries (SELECT, INSERT, UPDATE, DELETE).
+Process the results (if any).
+Close the connection and resources.
+
+
+6. Advantages
+Platform-independent database access.
+Supports multiple databases (MySQL, Oracle, SQL Server, etc.).
+Secure and robust with support for transactions and batch processing.
+
+
+7. Best Practices
+Always close connections, statements, and result sets to avoid resource leaks.
+Use PreparedStatement to prevent SQL injection.
+Handle exceptions using try-catch blocks.
+Use connection pooling for better performance in large applications.
+
+
+8. Summary
+JDBC is the standard Java API for database connectivity.
+It provides a uniform interface for accessing different relational databases.
+Proper resource management and security practices are essential for effective JDBC programming.

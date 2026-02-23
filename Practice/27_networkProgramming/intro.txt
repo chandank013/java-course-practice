@@ -1,0 +1,77 @@
+Network Programming in Java
+1. Introduction
+Network programming enables communication between computers over a network (LAN, WAN, Internet).
+Java provides high-level APIs for network programming in the java.net package.
+2. Key Concepts
+IP Address: Unique identifier for a device on a network.
+Port Number: Logical endpoint for communication.
+Protocol: Rules for data exchange (e.g., TCP, UDP).
+Socket: Endpoint for sending or receiving data.
+3. Important Classes in java.net
+Class	Purpose
+InetAddress	Represents an IP address
+Socket	Client-side TCP socket
+ServerSocket	Server-side TCP socket
+DatagramSocket	UDP socket
+DatagramPacket	Data container for UDP communication
+URL	Represents a Uniform Resource Locator
+URLConnection	Communicates with resources identified by URL
+
+
+4. TCP vs UDP
+TCP (Transmission Control Protocol):
+Connection-oriented, reliable, slower.
+Classes: Socket, ServerSocket
+UDP (User Datagram Protocol):
+Connectionless, unreliable, faster.
+Classes: DatagramSocket, DatagramPacket
+
+
+5. Basic TCP Example
+Server:
+ServerSocket ss = new ServerSocket(5000);
+Socket s = ss.accept();
+DataInputStream dis = new DataInputStream(s.getInputStream());
+String str = dis.readUTF();
+System.out.println(str);
+ss.close();
+
+Client:
+Socket s = new Socket("localhost", 5000);
+DataOutputStream dos = new DataOutputStream(s.getOutputStream());
+dos.writeUTF("Hello Server");
+s.close();
+
+6. Basic UDP Example
+Sender:
+DatagramSocket ds = new DatagramSocket();
+String msg = "Hello";
+InetAddress ip = InetAddress.getByName("localhost");
+DatagramPacket dp = new DatagramPacket(msg.getBytes(), msg.length(), ip, 3000);
+ds.send(dp);
+ds.close();
+
+Receiver:
+DatagramSocket ds = new DatagramSocket(3000);
+byte[] buf = new byte[1024];
+DatagramPacket dp = new DatagramPacket(buf, 1024);
+ds.receive(dp);
+System.out.println(new String(dp.getData(), 0, dp.getLength()));
+ds.close();
+
+7. Do's and Don'ts
+Do's:
+
+Always close sockets and streams after use.
+Handle exceptions (e.g., IOException).
+Use threads for handling multiple clients.
+Don'ts:
+
+Don't block the main thread with network operations.
+Don't ignore security (validate input, handle ports carefully).
+8. Summary
+Java makes network programming easy with the java.net package.
+Supports both TCP and UDP protocols.
+Sockets are the foundation for network communication in Java.
+Tip:
+For real-world applications, always handle exceptions, use proper threading, and consider security
